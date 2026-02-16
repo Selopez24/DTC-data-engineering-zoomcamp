@@ -209,3 +209,8 @@ __marimo__/
 # GCP Service Account Credentials
 gcs.json
 *.json.key
+
+# Data directory
+data/
+
+*.duckdb
