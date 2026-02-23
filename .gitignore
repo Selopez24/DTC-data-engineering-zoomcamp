@@ -214,3 +214,5 @@ gcs.json
 data/
 
 *.duckdb
+
+.bruin.yml

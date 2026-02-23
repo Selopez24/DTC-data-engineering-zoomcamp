@@ -43,9 +43,9 @@ Options:
 - `int_trips_unioned` only
 - `int_trips_unioned`, `int_trips`, and `fct_trips` (downstream dependencies)
 
-**Answer:** `stg_green_tripdata`, `stg_yellow_tripdata`, and `int_trips_unioned` (upstream dependencies)
+**Answer:** `int_trips_unioned` only
 
-Explanation: When you run `dbt run --select <model>`, dbt automatically includes all upstream dependencies (parent models) that the selected model depends on. It does NOT include downstream models (children). Since `int_trips_unioned` depends on both staging models, dbt will build all three models.
+Explanation: When you run `dbt run --select <model>`, dbt only runs the selected model. It does NOT automatically include upstream dependencies. To include parent models, you would need to use `--select +int_trips_unioned` (with the `+` prefix). This is different from `dbt build` which runs all models and their dependencies.
 
 ---
 
