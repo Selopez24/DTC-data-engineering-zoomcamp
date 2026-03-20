@@ -1,0 +1,4 @@
+pandas==2.0.0
+kafka-python==2.0.2
+pyflink==1.18.1
+pyflink-lib==1.18.1
